@@ -40,17 +40,6 @@ wandb.login()
 # Create config files
 !cp config/config.json.example config/config.json
 
-# Modify config.json (you may need to adjust these values)
-!sed -i 's/"model_type": "sd"/"model_type": "lora"/g' config/config.json
-!sed -i 's/"model_family": "stable-diffusion"/"model_family": "flux"/g' config/config.json
-!sed -i 's/"pretrained_model_name_or_path": "runwayml\/stable-diffusion-v1-5"/"pretrained_model_name_or_path": "black-forest-labs\/FLUX.1-dev"/g' config/config.json
-!sed -i 's/"output_dir": "output"/"output_dir": "\/content\/drive\/MyDrive\/flux_output"/g' config/config.json
-!sed -i 's/"train_batch_size": 4/"train_batch_size": 1/g' config/config.json
-!sed -i 's/"max_train_steps": 100000/"max_train_steps": 1000/g' config/config.json
-!sed -i 's/"save_steps": 500/"save_steps": 100/g' config/config.json
-!sed -i 's/"mixed_precision": "fp16"/"mixed_precision": "bf16"/g' config/config.json
-!sed -i 's/"base_model_precision": "default"/"base_model_precision": "int8-quanto"/g' config/config.json
-
 # Create multidatabackend.json
 cat << EOF > config/multidatabackend.json
 [

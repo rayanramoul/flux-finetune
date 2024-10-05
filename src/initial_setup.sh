@@ -13,8 +13,12 @@ pip install wandb
 
 # Clone SimpleTuner repository
 git clone --branch=release https://github.com/bghira/SimpleTuner.git
+cp config/* SimpleTuner/config/
 cd SimpleTuner
 
 # Install SimpleTuner dependencies
 pip install -U poetry
 poetry install
+
+wandb login
+huggingface-cli login
