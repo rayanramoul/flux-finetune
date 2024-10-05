@@ -1,0 +1,13 @@
+[project]
+name = "flux-finetune"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "diffusers>=0.30.3",
+    "huggingface-hub>=0.25.1",
+    "python-dotenv>=1.0.1",
+    "torch>=2.4.1",
+    "transformers>=4.45.1",
+]
